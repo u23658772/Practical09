@@ -31,19 +31,34 @@
 
         <label>Club Name</label>
         <br />
-        @Html.TextBoxFor(m => m.ClubName, new { @class = "form-control", @type = "text" })
+        //@Html.TextBoxFor(m => m.ClubName, new { @class = "form-control", @type = "text" })
+        <div>
+            
 
-        <label>Age</label>
-        <br />
-        @Html.TextBoxFor(m => m.Age, new { @class = "form-control", @type = "number" })
+            <select name="ClubName" id="ClubName">
+                <option value="Blue Sky">
+                    Blue Sky
+                </option>
+                <option value="Rotary">
+                    Rotary
+                </option>
+                <option value="Red Hat">Red Hat</option>
+                <option value="Spicy">
+                    Spicy
+                </option>
+            </select>
+            </div>
+            <label>Age</label>
+            <br />
+            @Html.TextBoxFor(m => m.Age, new { @class = "form-control", @type = "number" })
 
-        <label>Fee</label>
-        <br />
-        @Html.TextBoxFor(m => m.Fee, new { @class = "form-control", @type = "number", step = "0.01" })
+            <label>Fee</label>
+            <br />
+            @Html.TextBoxFor(m => m.Fee, new { @class = "form-control", @type = "number", step = "0.01" })
 
-        <br />
-        <button type="submit" class="btn btn-primary">Update</button>
-    }
-}
+            <br />
+            <button type="submit" class="btn btn-primary">Update</button>
+            }
+            }
 
 

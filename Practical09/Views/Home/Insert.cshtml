@@ -11,7 +11,23 @@
     @Html.TextBox("Name", null, new { @class = "form-control", @type = "text" });
     <label>ClubName</label>
     <br />
-    @Html.TextBox("ClubName", null, new { @class = "form-control", @type = "text" });
+    //@Html.TextBox("ClubName", null, new { @class = "form-control", @type = "text" });
+    <div >
+        
+
+        <select name="ClubName" id="ClubName">
+            <option value="Blue Sky">
+                Blue Sky
+            </option>
+            <option value="Rotary">
+                Rotary
+            </option>
+            <option value="Red Hat">Red Hat</option>
+            <option value="Spicy">
+                Spicy
+            </option>
+        </select>
+    </div><br />
     <label>Age</label>
     <br />
     @Html.TextBox("Age", null, new { @class = "form-control", @type = "number" });
@@ -22,7 +38,7 @@
 
 
 
-    <button type="submit" class="btn btn-primary" >Add</button>
+    <button type="submit" class="btn btn-primary">Add</button>
 }
 
 

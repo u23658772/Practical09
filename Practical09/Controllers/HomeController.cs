@@ -55,7 +55,7 @@ namespace Practical09.Controllers
 
         public ActionResult GetID(int Id)
         {
-            Practical09.Models.Member member = null; // Declare it at the top so it's available for the return
+            Practical09.Models.Member member = null; 
 
             try
             {
@@ -80,7 +80,7 @@ namespace Practical09.Controllers
                         };
                     }
                     
-                        myReader.Close(); // Always close the reader
+                        myReader.Close(); 
                 }
             }
             catch (Exception err)
@@ -89,7 +89,7 @@ namespace Practical09.Controllers
             }
             finally { myConnection.Close(); }
             
-            return View("Update",member); // Return the model to the view
+            return View("Update",member); // Return the member to the view
         }
 
         public ActionResult DoUpdate(Practical09.Models.Member member)
