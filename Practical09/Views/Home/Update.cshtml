@@ -1,0 +1,49 @@
+﻿@model Practical09.Models.Member
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+
+<br>
+
+@using (Html.BeginForm("GetID", "Home", FormMethod.Post))
+{
+
+    <label>ID</label>
+    <br />
+    @Html.TextBox("Id", null, new { @class = "form-control", @type = "number" });
+    <button type="submit" class="btn btn-primary">Search Member</button>
+}
+
+<br>
+
+@if (Model != null)
+{
+    using (Html.BeginForm("DoUpdate", "Home", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.Id)
+
+        <label>Name</label>
+        <br />
+        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @type = "text" })
+
+        <label>Club Name</label>
+        <br />
+        @Html.TextBoxFor(m => m.ClubName, new { @class = "form-control", @type = "text" })
+
+        <label>Age</label>
+        <br />
+        @Html.TextBoxFor(m => m.Age, new { @class = "form-control", @type = "number" })
+
+        <label>Fee</label>
+        <br />
+        @Html.TextBoxFor(m => m.Fee, new { @class = "form-control", @type = "number", step = "0.01" })
+
+        <br />
+        <button type="submit" class="btn btn-primary">Update</button>
+    }
+}
+
+

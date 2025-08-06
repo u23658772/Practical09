@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Insert";
+}
+
+<h2>Insert</h2>
+@using (Html.BeginForm("DoInsert", "Home", FormMethod.Post))
+{
+    <label>Name</label>
+    <br />
+    @Html.TextBox("Name", null, new { @class = "form-control", @type = "text" });
+    <label>ClubName</label>
+    <br />
+    @Html.TextBox("ClubName", null, new { @class = "form-control", @type = "text" });
+    <label>Age</label>
+    <br />
+    @Html.TextBox("Age", null, new { @class = "form-control", @type = "number" });
+    <label>Fee</label>
+    <br />
+    @Html.TextBox("Fee", null, new { @class = "form-control", @type = "number", });
+    <br />
+
+
+
+    <button type="submit" class="btn btn-primary" >Add</button>
+}
+
+
